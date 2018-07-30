@@ -32,7 +32,16 @@ const get = require('lodash/get');
       }, unitElement);
 
 
-      console.log(`category:${category} , product:${product}, price:${price}, unit:${unit}`);
+
+      let promotionObj = get(productObjects, 'promotion');
+      let promotionFlag = false;
+      const promotionElement = (await page.$x(promotionObj))[0];
+      if(promotionElement !== undefined) {
+        promotionFlag = true;
+      }
+
+
+      console.log(`category:${category} , product:${product}, price:${price}, unit:${unit}, promotion:${promotionFlag}`);
       await browser.close();
 
     })
