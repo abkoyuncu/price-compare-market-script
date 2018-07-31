@@ -4,7 +4,9 @@
   "description": "Puppeteer based web page element scrapping script for  Polish supermarkets",
   "main": "index.js",
   "scripts": {
-    "tesco": "node ./src/markets/tesco/scripts/getTescoProductDetails"
+    "tesco-fruits": "node ./src/markets/tesco/scripts/getTescoFruitProductDetails",
+    "tesco-vegetables": "node ./src/markets/tesco/scripts/getTescoVegetableProductDetails",
+    "carefour-fruits": "node ./src/markets/carefour/scripts/getCarefourFruitProductDetails"
   },
   "author": "ABK-EB",
   "license": "ISC",
